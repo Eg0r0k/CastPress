@@ -39,7 +39,7 @@ volumeBtn.addEventListener("click",function()
 const show = audio.addEventListener('loadedmetadata', function() {
     let duration = audio.duration; 
     let min = Math.floor(duration/60)
-    let sec = Math.round(duration%60)
+    let sec = Math.floor(duration%60)
     if (min< 10 ) { min = '0'+ min;}
     if (sec < 10) {sec = '0' + sec}
    audioEnd.textContent= min +":" + sec; 
@@ -98,7 +98,7 @@ const show = audio.addEventListener('loadedmetadata', function() {
   {
     let link = document.createElement('a')
     link.href = audio.src
-    link.download = '/audio/X2Download.app - Мумий Тролль - Владивосток 2000 (320 kbps)-instrumental.mp3'
+    link.download = audio.src;
     link.click();
   })
   // Громкость звука
@@ -111,6 +111,9 @@ const show = audio.addEventListener('loadedmetadata', function() {
     {
       volumeBtn.classList.remove('fa-volume-xmark')   //Если громкость больше 0 убираем класс mute
     }
-    
+    if (volume == 0 )
+    {
+      volumeBtn.classList.add('fa-volume-xmark')
+    }
   })
   document.addEventListener("DOMContentLoaded",show)

@@ -652,6 +652,10 @@ template {
   letter-spacing: 0.16em;
 }
 
+.fa-volume-xmark {
+  width: 13px;
+}
+
 .fa-play, .fa-volume-low, .fa-download, .fa-pause {
   cursor: pointer;
   font-size: 15px;
