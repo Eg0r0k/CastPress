@@ -1,6 +1,6 @@
 $gray: rgba(151, 151, 151, 1);
 $blackgray: rgba(34, 34, 34, 1);
-
+$border: 1px solid rgba(234, 234, 238, 1);
 .song {
     margin-bottom: clamp(64px,96px,96px);
     &__container {
@@ -126,8 +126,9 @@ margin-bottom: 24px;
 {
     &__container
     {
-        border: 1px solid rgba(234, 234, 238, 1);
+        border: $border;
         padding: 24px !important;
+        max-width: 625px !important;
     }
     &__title 
     {
@@ -137,14 +138,16 @@ margin-bottom: 24px;
             
         }
     }
+    margin-bottom: 24px;
 }
 
 .discription
 {
     height: 352px;
+    max-width: 625px !important;
     overflow-y: scroll;
     padding: 24px !important;
-    border: 1px solid rgba(234, 234, 238, 1);
+    border: $border;
     word-wrap: break-all;
     border-top: none;
     &::-webkit-scrollbar
@@ -162,3 +165,26 @@ margin-bottom: 24px;
       }
     
 }
+
+.tags
+{
+    &__container
+    {
+        max-width: 670px !important;
+        margin: 0 auto;
+        padding: 24px 0px !important;
+        border-bottom:$border;
+    }
+    &__items 
+    {
+        margin-right: 24px;
+        &:last-child
+        {
+            margin-right: 0;
+        }
+    }
+    &__share
+    {
+        color:rgba(34, 34, 34, 1) !important;
+    }
+} 

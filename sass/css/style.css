@@ -541,9 +541,13 @@ template {
   margin-bottom: 39px;
 }
 
+.listenTime {
+  margin-bottom: 24px;
+}
 .listenTime__container {
   border: 1px solid rgb(234, 234, 238);
   padding: 24px !important;
+  max-width: 625px !important;
 }
 .listenTime__title i {
   color: rgb(114, 71, 202);
@@ -551,6 +555,7 @@ template {
 
 .discription {
   height: 352px;
+  max-width: 625px !important;
   overflow-y: scroll;
   padding: 24px !important;
   border: 1px solid rgb(234, 234, 238);
@@ -566,6 +571,22 @@ template {
   background-color: blue; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 6px solid rgb(151, 151, 151); /* creates padding around scroll thumb */
+}
+
+.tags__container {
+  max-width: 670px !important;
+  margin: 0 auto;
+  padding: 24px 0px !important;
+  border-bottom: 1px solid rgb(234, 234, 238);
+}
+.tags__items {
+  margin-right: 24px;
+}
+.tags__items:last-child {
+  margin-right: 0;
+}
+.tags__share {
+  color: rgb(34, 34, 34) !important;
 }
 
 .audio {
@@ -691,7 +712,7 @@ span {
 
 .container {
   padding: 0 16px;
-  max-width: 673px;
+  max-width: 641px;
   margin: 0 auto;
 }
 
