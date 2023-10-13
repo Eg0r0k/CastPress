@@ -1,0 +1,72 @@
+@import "./resets";
+@import "./normalazis";
+@import "./header";
+@import "./podcast";
+@import "./audio";
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap');
+/* MAIN STYLES 
+/* ================================================ */
+$black: black;
+$purple:rgba(114, 71, 202, 1);
+$gray:rgba(85, 85, 85, 1);
+
+body{
+    height: 100%;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
+span {
+    display: inline-block;
+}
+
+.link
+{
+    text-decoration: none;
+    color:$black;
+    font-family: 'Source Serif 4' ;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+
+
+}
+.purple
+{
+    color: $purple;
+
+}
+.open 
+{
+    transform: translate(0);
+}
+
+.midText
+{
+    //styleName: 16px - Heading 4 - Regular;
+    font-family: 'Source Serif 4';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:$gray;
+
+}
+.container
+    {
+        padding: 0 16px;
+        max-width: 673px;
+        margin: 0 auto;
+    }
+
+.Title
+{
+    font-family: 'Source Serif 4';
+font-size: 21px;
+font-weight: 600;
+line-height: 25px;
+letter-spacing: 0em;
+
+}

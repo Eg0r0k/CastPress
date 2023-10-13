@@ -1,0 +1,110 @@
+$background: rgba(245, 245, 247, 1);
+$black:rgba(34, 34, 34, 1);
+
+
+
+.audio{
+    margin-bottom: 40px;
+    &__bar
+    {
+        cursor: pointer;
+        border-radius:2px;
+        width: 100%;
+     
+        background-color:$background;
+        height: 7px;
+    }
+    &__fill
+    {
+        position: relative;
+        border-radius:2px;
+        width: 0;
+        height: 100%;
+        background-color: $black;
+        &::before
+        {
+         
+            content: "";
+            aspect-ratio: 1/1;
+            width: 9px;
+            background-color:rgb(2, 2, 2);
+            position: absolute;
+            right:-5px;
+            border-radius:100%;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+
+        }
+    
+    }
+    &__tools
+    {
+        display: flex;
+        align-items:center;
+
+    }
+    &__time
+    {
+     margin-right: 4px;   
+    }
+    &__endtime
+    {
+        
+        margin-left:10px;
+        margin-right: 10px;
+    }
+    &__volumeRange
+    {
+       position: absolute;
+        // transform: rotate(-90deg);
+        width: 55px;
+        top: -20px;
+        box-shadow: 0 0 5px $background;
+        left: -60%;
+      border:none;
+        &[type="range"]
+        {
+            accent-color: $black;
+        }
+        
+        
+    }
+    &__volume
+    {
+        position: relative;
+        
+
+  
+    }
+}
+.time
+{
+    //styleName: 12px - Heading 6/12px - Heading 6 - Regular;
+font-family: 'Source Serif 4';
+font-size: 12px;
+font-weight: 400;
+line-height: 15px;
+letter-spacing: 0.16em;
+
+}
+
+.fa-play,.fa-volume-low,.fa-download,.fa-pause
+{
+   cursor: pointer;
+    font-size: 15px;
+}
+.fa-play
+{
+   
+    margin-right: 16px;
+}
+.fa-pause
+{
+   
+    margin-right: 18px;
+}
+.fa-volume-low
+{
+    margin-right: 17px;
+}

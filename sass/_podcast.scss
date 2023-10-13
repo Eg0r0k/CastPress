@@ -1,0 +1,164 @@
+$gray: rgba(151, 151, 151, 1);
+$blackgray: rgba(34, 34, 34, 1);
+
+.song {
+    margin-bottom: clamp(64px,96px,96px);
+    &__container {
+        padding: 0 16px;
+        max-width: 673px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &--img
+    {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 39px;
+    }
+    h1
+    {
+        //styleName: 26px - Heading 1 - SemiBold;
+        font-family: 'Source Serif 4';
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: 0em;
+        margin-bottom: 16px;
+
+    }
+    &__info
+    {
+       //styleName: 14px - Heading 5/14px - Heading 5 - Regular;
+        font-family: 'Source Serif 4';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        color: $gray;
+        margin-bottom: 48px;
+
+    }
+}
+.listenOn
+{
+    &__title
+    {
+        //styleName: 12px - Heading 6/12px - Heading 6 - Semibold;
+        font-family: 'Source Serif 4';
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15px;
+        letter-spacing: 0.16em;
+        margin-bottom: 12px;
+     
+    }
+    &__streaming
+    {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 135px;
+        &--link
+        {
+           
+            text-decoration: none;
+            color:$blackgray;
+            & i 
+            {
+                font-size: 30px;
+            }
+            &:nth-child(1)
+            {
+                
+                &:hover
+                {
+                    color:rgb(62, 182, 62);
+                }
+            }
+            &:nth-child(2)
+            {
+                &:hover
+                {
+                    color:rgb(255, 83, 20);
+                }
+            }
+            &:nth-child(3)
+            {
+                &:hover
+                {
+                    color:rgb(155, 155, 155);
+                }
+            }
+            &:hover
+            {
+                transition: all 0.2s ease-in;
+            }
+        }
+    }
+}
+.podcastTheme
+{
+    margin-bottom:48px ;
+ &__container
+ {
+    padding: 0 16px;
+    max-width: 673px;
+    margin: 0 auto;
+   
+ }
+ &__title
+ {
+    //styleName: 21px - Heading 2 - SemiBold;
+font-family: 'Source Serif 4';
+font-size: 21px;
+font-weight: 600;
+line-height: 25px;
+letter-spacing: 0em;
+text-align: left;
+margin-bottom: 24px;
+ }
+ &__about
+ {
+    margin-bottom: 39px;
+ }
+}
+.listenTime
+{
+    &__container
+    {
+        border: 1px solid rgba(234, 234, 238, 1);
+        padding: 24px !important;
+    }
+    &__title 
+    {
+        & i 
+        {
+            color:rgba(114, 71, 202, 1);
+            
+        }
+    }
+}
+
+.discription
+{
+    height: 352px;
+    overflow-y: scroll;
+    padding: 24px !important;
+    border: 1px solid rgba(234, 234, 238, 1);
+    word-wrap: break-all;
+    border-top: none;
+    &::-webkit-scrollbar
+    {
+      border-radius:10px;
+        background: rgba(234, 234, 238, 1);
+        width: 6px;
+   
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: blue;    /* color of the scroll thumb */
+        border-radius: 20px;       /* roundness of the scroll thumb */
+        border: 6px solid rgba(151, 151, 151, 1);  /* creates padding around scroll thumb */
+        
+      }
+    
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/mediaelement@latest/build/mediaelementplayer.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/howler@2.2.3/dist/howler.min.js"></script>
+    <title>Castpress.</title>
+  </head>
+  <header class="header">
+    <div class="header__container">
+      <a href="#" class="header__logo link">
+        <p class="header__logo--text">Castpress.</p>
+      </a>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__item">
+            <a href="" class="header__link link"
+              >Episodes
+              <i class="fa-solid fa-chevron-up fa-flip-vertical"></i>
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="" class="header__link link">Blog</a>
+          </li>
+          <li class="header__item">
+            <a href="" class="header__link link">Contact</a>
+          </li>
+          <li class="header__item">
+            <span class="item--purple"
+              ><a href="" class="header__link link purple">
+                <i class="fa-regular fa-heart"></i>
+                Donate</a
+              >
+            </span>
+          </li>
+          <a href="" class="header__search link">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+      
+        </ul>
+      </nav>
+      <button class="header__burger--open">
+        <i class="fa-solid fa-bars burger--icon"></i>
+      </button>
+    </div>
+  </header>
+  <body>
+    <main>
+      <section class="song">
+        <div class="song__container ">
+         <img src="./img/SongImg.png" alt="PodcastTime" class="song--img">
+         <h1>Makemeup Podcast Theme; launch it now!</h1>
+         <p class="song__info">Episode 18  |  jan 8, 2021  |  By VitaThemes</p>
+          <div class="audio">
+            <audio class="audio__src" src="./audio/X2Download.app - Мумий Тролль - Владивосток 2000 (320 kbps)-instrumental.mp3"></audio>
+            <div class="audio__tools">
+              <div class="audio__play"><i class="fa-solid fa-play"></i></div>
+              <p class="audio__time time">00:00</p>
+              <div class="audio__bar">
+                <div class="audio__fill" id="fill"></div>
+              </div>
+              <p class="audio__endtime time">00:00</p>
+              <div class="audio__volume">
+                <input type="range" min="0" max="100"  value="100" class="audio__volumeRange"> 
+                <i class="fa-solid fa-volume-low" id="volumeIcon"></i></div>
+              <div class="audio__download"><i class="fa-solid fa-download"></i></div>
+            </div>
+          </div>
+          <div class="listenOn">
+            <h2 class="listenOn__title">LISTEN ON</h2>
+            <div class="listenOn__streaming">
+              <a href="https://www.spotify.com/" target="_blank" class="listenOn__streaming--link">
+                <i class="fa-brands fa-spotify"></i>
+              </a>
+             
+              <a href="https://soundcloud.com" target="_blank" class="listenOn__streaming--link">
+                <i class="fa-brands fa-soundcloud"></i>
+              </a>
+              <a href="https://www.icloud.com/" target="_blank" class="listenOn__streaming--link">
+                <i class="fa-brands fa-apple"></i>
+              </a>
+            </div>
+          </div>
+      </section>
+      <section class="podcastTheme">
+        <div class="podcastTheme__container">
+          <p class="podcastTheme__about midText">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed mollis augue. Cras suscipit sit amet est in aliquam. In vel blandit nunc. Donec at dolor in orci tristique bibendum.Cras non interdum ligula, sit amet imperdiet purus. Vestibulum quis leo nibh. 
+
+          </p>
+          <h2 class="podcastTheme__title ">Makemeup Podcast Theme </h2>
+          <p class="midText">Vivamus et aliquet neque. Mauris feugiat blandit augue a vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam a luctus magna, a finibus massa. <br>
+            Proin ultricies, arcu ac dignissim sollicitudin, nibh nibh fermentum eros, id consequat nisi odio vestibulum tortor. Cras non interdum ligula, sit amet imperdiet purus. Vestibulum quis leo nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam a luctus magna, a finibus massa.
+            </p>
+        </div>
+  
+      </section>
+      <section class="listenTime">
+        <div class="listenTime__container container">
+          <p class="listenTime__title Title">Listening time: 86 minutes  |  View transcript  <i class="fa-solid fa-arrow-right"></i></p> 
+        </div>
+        <div class="discription container">
+            <div class="discription__author midText">
+              Per Axbom<br>
+              Hello, I’m Per Axbom.
+              <br>     <br>
+              James Royal-Lawson<br>
+              And I’m James Royal-Lawson.
+            </div>
+            <div class="discription__theme midText">
+              Per Axbom <br>
+              Vivamus et aliquet neque. Mauris feugiat blandit augue a vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam a luctus magna, a finibus massa. <br>
+              Proin ultricies, arcu ac dignissim sollicitudin, nibh nibh fermentum eros, Cras non interdum ligula, sit amet imperdiet purus. Vestibulum quis leo nibh.  
+            </div>
+            <div class="discription__theme midText">
+              Per Axbom <br>
+              Vivamus et aliquet neque. Mauris feugiat blandit augue a vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam a luctus magna, a finibus massa. <br>
+              Proin ultricies, arcu ac dignissim sollicitudin, nibh nibh fermentum eros, Cras non interdum ligula, sit amet imperdiet purus. Vestibulum quis leo nibh.  
+            </div>
+            <div class="discription__theme midText">
+              Per Axbom <br>
+              Vivamus et aliquet neque. Mauris feugiat blandit augue a vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam a luctus magna, a finibus massa. <br>
+              Proin ultricies, arcu ac dignissim sollicitudin, nibh nibh fermentum eros, Cras non interdum ligula, sit amet imperdiet purus. Vestibulum quis leo nibh.  
+            </div>
+          </div>
+      </section>
+      <section class="tags">
+        <div class="tags__container">
+          <div class="tags__links">
+            <p class="tags__items">#Apple</p>
+            <p class="tags__items">#Keynote</p>
+            <p class="tags__items">#Product</p>
+          </div>
+        </div>
+        <div class="tags__media">
+
+        </div>
+      </section>
+    </main>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/d913e4cb61.js"
+    crossorigin="anonymous"
+  ></script>
+  
+  <script src="./js/burger.js"></script>
+  <script src="./js/audioplayer.js"></script>
+</html>
