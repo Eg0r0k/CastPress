@@ -1,0 +1,34 @@
+.posts
+{
+    &__container
+    {
+      
+        max-width: 654px;
+        padding: 0 16px;
+        margin: 0 auto;
+    }
+    &__item 
+    {
+        
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 24px;
+
+    }
+    &__content
+    {
+       & h3 
+       {
+        margin-bottom: 16px;
+       }
+       & p 
+       {
+        margin-bottom: 39px;
+
+       }
+       
+       margin-bottom: 24px;
+    }
+  
+}

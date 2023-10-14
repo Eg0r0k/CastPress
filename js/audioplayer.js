@@ -1,40 +1,31 @@
 
-const audioPlay = document.querySelector(".audio__play")
-const audioIcon = document.querySelector(".fa-play")
-const audioDownload = document.querySelector(".audio__download")
-const audio = document.querySelector(".audio__src")
-const audioEnd = document.querySelector(".audio__endtime")
-const fill = document.getElementById('fill')
-const audioCurrentTime = document.querySelector(".audio__time")
-const bar = document.querySelector(".audio__bar")
-const volumeBtn = document.getElementById('volumeIcon')
-const InputRange = document.querySelector(".audio__volumeRange")
+const audioPlay = document.querySelector(".audio__play"),
+ audioIcon = document.querySelector(".fa-play"),
+ audioDownload = document.querySelector(".audio__download"),
+ audio = document.querySelector(".audio__src"),
+ audioEnd = document.querySelector(".audio__endtime"),
+ fill = document.getElementById('fill'),
+ audioCurrentTime = document.querySelector(".audio__time"),
+ bar = document.querySelector(".audio__bar"),
+ volumeBtn = document.getElementById('volumeIcon'),
+ InputRange = document.querySelector(".audio__volumeRange")
 
 //Мьют трека 
-
-volumeBtn.addEventListener("click",function()
-{
- 
-  if(volumeBtn.classList.contains('fa-volume-xmark'))
-  {
-    
-    audio.volume = localStorage.getItem('last');
-    volumeBtn.classList.remove("fa-volume-xmark")
-    InputRange.value=Number(localStorage.getItem('last'))*100;
-
-    localStorage.clear()
-
+volumeBtn.addEventListener("click", function() {
+  const isMuted = volumeBtn.classList.contains('fa-volume-xmark');
+  if (isMuted) {
+    const lastVolume = localStorage.getItem('last') || 1; // По умолчанию громкость 1, если не найдено в localStorage
+    audio.volume = lastVolume;
+    InputRange.value = lastVolume * 100;
+    localStorage.removeItem('last'); 
+  } else {
+    localStorage.setItem('last', audio.volume);
+    audio.volume = 0;
+    InputRange.value = 0;
   }
-  else{
-    let lastVolume = audio.volume;
-    localStorage.setItem('last',lastVolume)
-    audio.volume=0;
-    InputRange.value=0;
-    volumeBtn.classList.add('fa-volume-xmark')
-  }
+  volumeBtn.classList.toggle('fa-volume-xmark'); // Используем toggle для переключения класса
+});
 
-  
-})
 //Длинна трека
 const show = audio.addEventListener('loadedmetadata', function() {
     let duration = audio.duration; 
@@ -42,24 +33,24 @@ const show = audio.addEventListener('loadedmetadata', function() {
     let sec = Math.floor(duration%60)
     if (min< 10 ) { min = '0'+ min;}
     if (sec < 10) {sec = '0' + sec}
-   audioEnd.textContent= min +":" + sec; 
+   audioEnd.textContent= `${min}:${sec}`;
 
   });
 
+//Пауза и включение трека
   audioPlay.addEventListener("click",function()
   {
     if(audioIcon.classList.contains("fa-play") )
     {
         audio.play()
-        audioIcon.classList.remove("fa-play")
-        audioIcon.classList.add("fa-pause")
+        audioIcon.classList.replace("fa-play", "fa-pause");
     }
     else{
         audio.pause()
-        audioIcon.classList.remove("fa-pause")
-        audioIcon.classList.add("fa-play")
+        audioIcon.classList.replace("fa-pause", "fa-play");
     }
   })
+
 // Отсчет начала трека 
    audio.addEventListener("timeupdate",function()
    {
@@ -68,7 +59,7 @@ const show = audio.addEventListener('loadedmetadata', function() {
      let  min = Math.floor(audioCurrent / 60) ;
       if (sec < 10){ sec = '0' + sec}
       if(min < 10) {min = '0' + min}
-      audioCurrentTime.textContent= min + ':' + sec;
+      audioCurrentTime.textContent= `${min}:${sec}`;
     })                 
 
   // Прогресс бар
@@ -107,13 +98,10 @@ const show = audio.addEventListener('loadedmetadata', function() {
   volumeRange.addEventListener("input",function(e){
    let volume =  Number(e.target.value);
     audio.volume =volume / 100
-    if(volume > 0)
-    {
-      volumeBtn.classList.remove('fa-volume-xmark')   //Если громкость больше 0 убираем класс mute
-    }
-    if (volume == 0 )
-    {
-      volumeBtn.classList.add('fa-volume-xmark')
+    if (volume > 0) {
+      volumeBtn.classList.remove('fa-volume-xmark');
+    } else {
+      volumeBtn.classList.add('fa-volume-xmark');
     }
   })
   document.addEventListener("DOMContentLoaded",show)

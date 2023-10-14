@@ -143,9 +143,10 @@ margin-bottom: 24px;
 
 .discription
 {
-    height: 352px;
+    height: 314px;
     max-width: 625px !important;
     overflow-y: scroll;
+   
     padding: 24px !important;
     border: $border;
     word-wrap: break-all;
@@ -163,7 +164,14 @@ margin-bottom: 24px;
         border: 6px solid rgba(151, 151, 151, 1);  /* creates padding around scroll thumb */
         
       }
-    
+    &__author
+    {
+        margin-bottom: 24px;
+    }
+    &__theme    
+    {
+        margin-bottom: 24px;
+    }
 }
 
 .tags
@@ -174,6 +182,7 @@ margin-bottom: 24px;
         margin: 0 auto;
         padding: 24px 0px !important;
         border-bottom:$border;
+        display: flex;
     }
     &__items 
     {
@@ -182,9 +191,16 @@ margin-bottom: 24px;
         {
             margin-right: 0;
         }
+        text-decoration: none;
+        & i
+        {
+            font-size: 20px;
+            color:$blackgray;
+        }   
     }
     &__share
     {
         color:rgba(34, 34, 34, 1) !important;
     }
+    margin-bottom: 48px;
 } 

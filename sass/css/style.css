@@ -554,7 +554,7 @@ template {
 }
 
 .discription {
-  height: 352px;
+  height: 314px;
   max-width: 625px !important;
   overflow-y: scroll;
   padding: 24px !important;
@@ -572,18 +572,33 @@ template {
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 6px solid rgb(151, 151, 151); /* creates padding around scroll thumb */
 }
+.discription__author {
+  margin-bottom: 24px;
+}
+.discription__theme {
+  margin-bottom: 24px;
+}
 
+.tags {
+  margin-bottom: 48px;
+}
 .tags__container {
   max-width: 670px !important;
   margin: 0 auto;
   padding: 24px 0px !important;
   border-bottom: 1px solid rgb(234, 234, 238);
+  display: flex;
 }
 .tags__items {
   margin-right: 24px;
+  text-decoration: none;
 }
 .tags__items:last-child {
   margin-right: 0;
+}
+.tags__items i {
+  font-size: 20px;
+  color: rgb(34, 34, 34);
 }
 .tags__share {
   color: rgb(34, 34, 34) !important;
@@ -636,12 +651,17 @@ template {
   box-shadow: 0 0 5px rgb(245, 245, 247);
   left: -60%;
   border: none;
+  visibility: hidden;
+  transition: all 0.2s ease-in;
 }
 .audio__volumeRange[type=range] {
   accent-color: rgb(34, 34, 34);
 }
 .audio__volume {
   position: relative;
+}
+.audio__volume:hover input {
+  visibility: visible;
 }
 
 .time {
@@ -671,6 +691,27 @@ template {
 
 .fa-volume-low {
   margin-right: 17px;
+}
+
+.posts__container {
+  max-width: 654px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+.posts__item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.posts__content {
+  margin-bottom: 24px;
+}
+.posts__content h3 {
+  margin-bottom: 16px;
+}
+.posts__content p {
+  margin-bottom: 39px;
 }
 
 /* MAIN STYLES 

@@ -67,15 +67,21 @@ $black:rgba(34, 34, 34, 1);
         {
             accent-color: $black;
         }
+        visibility: hidden;
         
-        
+        transition: all 0.2s ease-in;
     }
     &__volume
     {
         position: relative;
-        
-
-  
+        &:hover
+        {
+            & input
+            {
+                visibility: visible;
+              
+            }
+        }
     }
 }
 .time
@@ -111,3 +117,4 @@ letter-spacing: 0.16em;
 {
     margin-right: 17px;
 }
+
