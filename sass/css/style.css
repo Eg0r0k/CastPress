@@ -833,6 +833,60 @@ template {
   color: red;
 }
 
+.footer a {
+  text-decoration: none;
+}
+.footer a:hover {
+  color: rgb(114, 71, 202);
+}
+.footer__container {
+  padding: 52px 16px;
+  max-width: 638px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.footer__from {
+  width: 315px;
+  background-color: red;
+}
+.footer__btn {
+  position: absolute;
+}
+.footer__input {
+  position: relative;
+}
+.footer__bottom {
+  text-align: center;
+  margin: 0 auto;
+}
+.footer__privacy {
+  margin-bottom: 24px;
+  font-family: "Source Serif 4";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.footer__media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 39px;
+  justify-content: center;
+}
+.footer__media--links {
+  transition: all 0.2s ease-in-out;
+  font-size: 15px;
+  color: rgb(34, 34, 34);
+}
+.footer__media--links:hover {
+  color: rgb(114, 71, 202);
+}
+
 /* MAIN STYLES 
 /* ================================================ */
 body {
