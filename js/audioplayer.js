@@ -27,15 +27,15 @@ volumeBtn.addEventListener("click", function() {
 });
 
 //Длинна трека
-const show = audio.addEventListener('loadedmetadata', function() {
-    let duration = audio.duration; 
-    let min = Math.floor(duration/60)
-    let sec = Math.floor(duration%60)
-    if (min< 10 ) { min = '0'+ min;}
-    if (sec < 10) {sec = '0' + sec}
-   audioEnd.textContent= `${min}:${sec}`;
+const show = audio.addEventListener('canplaythrough', function() {
+  let duration = audio.duration; 
+  let min = Math.floor(duration/60);
+  let sec = Math.floor(duration%60);
+  if (min < 10) { min = '0' + min; }
+  if (sec < 10) { sec = '0' + sec; }
+  audioEnd.textContent = `${min}:${sec}`;
+});
 
-  });
 
 //Пауза и включение трека
   audioPlay.addEventListener("click",function()
