@@ -62,27 +62,51 @@ const show = audio.addEventListener('loadedmetadata', function() {
       audioCurrentTime.textContent= `${min}:${sec}`;
     })                 
 
-  // Прогресс бар
-  audio.addEventListener("timeupdate",function(){
+    let isDragging = false; //Проверка на перетаскивание 
+
+    //Заполнение прогресс бара     
+    audio.addEventListener("timeupdate", () => {
+      const percent = (audio.currentTime / audio.duration) * 100;
+      fill.style.width = `${percent}%`;
     
-    let percent = (audio.currentTime / audio.duration) * 100;
-     fill.style.width = percent + '%';
-
-     if (fill.style.width == 100 + '%')       // Если прогресс бар 100% поставить иконку play 
-     {
-      audio.pause()
-      audioIcon.classList.add("fa-play")
-     }
-  })
-
-
-  // Отслежтвагте нажатия на прогресс бар
-  bar.addEventListener('click', function(e) {
-    let rect = bar.getBoundingClientRect();
-    let offsetX = e.clientX - rect.left;
-    let percent = offsetX / rect.width;
-    audio.currentTime = audio.duration * percent;
-  });
+      if (percent === 100) {
+        audio.pause();
+        audioIcon.classList.add("fa-play");
+      }
+    });
+    //Перетаскивание бара на ПК
+    bar.addEventListener('click', (e) => {
+      const rect = bar.getBoundingClientRect();
+      const offsetX = (e.type === 'click') ? e.clientX - rect.left : e.touches[0].clientX - rect.left;
+      const percent = Math.min(1, Math.max(0, offsetX / rect.width));
+      fill.style.width = `${percent * 100}%`;
+      audio.currentTime = audio.duration * percent;
+    });
+    //Перетаскивание на Телефоне 
+    fill.addEventListener('touchstart', (e) => {
+      const rect = bar.getBoundingClientRect();
+      const offsetX = e.touches[0].clientX - rect.left;
+      const percent = Math.min(1, Math.max(0, offsetX / rect.width));
+      fill.style.width = `${percent * 100}%`;
+      audio.currentTime = audio.duration * percent;
+      isDragging = true;
+      e.preventDefault();
+    });
+    //Перетаскивание на Телефоне 
+    document.addEventListener('touchmove', (e) => {
+      if (isDragging) {
+        const rect = bar.getBoundingClientRect();
+        const offsetX = e.touches[0].clientX - rect.left;
+        const percent = Math.min(1, Math.max(0, offsetX / rect.width));
+        fill.style.width = `${percent * 100}%`;
+        audio.currentTime = audio.duration * percent;
+      }
+    });
+     //isDragging false если нажато
+    document.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+    
 
 // Заргузка файла из источника audio
   audioDownload.addEventListener("click",function()
@@ -95,13 +119,13 @@ const show = audio.addEventListener('loadedmetadata', function() {
   // Громкость звука
   let volumeRange = document.querySelector(".audio__volumeRange")
 
-  volumeRange.addEventListener("input",function(e){
-   let volume =  Number(e.target.value);
-    audio.volume =volume / 100
+  volumeRange.addEventListener("input", function() {
+    let volume = Number(this.value);
+    audio.volume = volume / 100;
     if (volume > 0) {
       volumeBtn.classList.remove('fa-volume-xmark');
     } else {
       volumeBtn.classList.add('fa-volume-xmark');
     }
-  })
+  });
   document.addEventListener("DOMContentLoaded",show)
