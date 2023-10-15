@@ -178,11 +178,12 @@ margin-bottom: 24px;
 {
     &__container
     {
-        max-width: 670px !important;
+        max-width: 638px !important;
         margin: 0 auto;
-        padding: 24px 0px !important;
+        padding: 24px 16px !important;
         border-bottom:$border;
         display: flex;
+      
     }
     &__items 
     {
@@ -204,3 +205,128 @@ margin-bottom: 24px;
     }
     margin-bottom: 48px;
 } 
+
+.reaply
+{
+    &__text
+    {
+        & h3 
+        {
+            //styleName: 16px - Heading 4 - Regular;
+        font-family:  'Source Serif 4';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: left;
+        color:rgba(34, 34, 34, 1);
+
+        }
+        & p 
+        {
+        //styleName: 14px - Heading 5/14px - Heading 5 - Regular;
+        font-family: 'Source Serif 4';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        color:rgba(151, 151, 151, 1);
+        margin-bottom: 35px;
+        }
+    }
+    &__container
+    {
+        max-width: 634px;
+        padding: 0 16px;
+        margin: 0 auto;
+        border-bottom: $border;
+    }
+    &__form 
+    {
+        & input 
+        {
+            display: block;
+            width: 100%;
+            margin-bottom: 28px;
+          
+        }
+    }
+    &__comment
+    {
+        display: block;
+  
+        width: 100%;
+      height: 150px;
+      outline: none;
+      resize: none; /* Запрещаем изменять размер */
+
+      margin-bottom: 28px;
+    }
+    &__formStyle
+    {
+        background-color:rgba(245, 245, 247, 1);
+        border: none;
+        border-radius:4px;
+    }
+    & h2 
+    {
+        //styleName: 16px - Heading 4 - Regular;
+    font-family: 'Source Serif 4';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 15px;
+    color: rgba(85, 85, 85, 1);
+
+    }
+    &__radio
+    {
+        display: flex;
+        align-items:center;
+    }
+    & label
+    {
+        font-family: 'Source Serif 4';
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15px;
+            letter-spacing: 0em;
+            text-align: left;
+
+    }
+    &__btn 
+    {
+        background-color:rgba(114, 71, 202, 1);
+        //styleName: 14px - Heading 5/14px - Heading 5 - Regular;
+        font-family: 'Source Serif 4';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        color:rgba(255, 255, 255, 1);
+        border:none;
+        padding: 8px 16px;
+        width: 90px !important;
+        border-radius:4px;
+        margin-top: 39px;
+        &:active
+        {
+            transform: scale(1.05);
+        }
+    }
+}
+#save 
+{
+    width: 18px;
+    height: 18px;
+    border: 1px solid rgba(34, 34, 34, 1);
+    margin: 0;
+    display: inline-block !important;
+    border-radius:4px;
+    margin-right: 8px;
+
+}
