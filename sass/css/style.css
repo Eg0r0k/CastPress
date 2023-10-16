@@ -871,6 +871,7 @@ template {
 .footer__bottom {
   text-align: center;
   margin: 0 auto;
+  margin-top: 89px;
 }
 .footer__privacy {
   margin-bottom: 24px;
