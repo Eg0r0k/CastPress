@@ -72,3 +72,22 @@ line-height: 25px;
 letter-spacing: 0em;
 
 }
+// body{
+//     & *{
+//         overflow: scroll;
+ 
+//         animation: 1s linear 0s normal none infinite running rot;
+//         -webkit-animation: 1s linear 0s normal none infinite running rot;
+//     }
+  
+
+ 
+// }
+// @keyframes rot {
+//     0% {
+//       transform: rotate(0deg);
+//     }
+//     100% {
+//       transform: rotate(360deg);
+//     }
+//   }

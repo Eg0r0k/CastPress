@@ -31,11 +31,13 @@ const show = audio.addEventListener('canplaythrough', function() {
   let duration = audio.duration; 
   let min = Math.floor(duration/60);
   let sec = Math.floor(duration%60);
+
   if (min < 10) { min = '0' + min; }
   if (sec < 10) { sec = '0' + sec; }
   audioEnd.textContent = `${min}:${sec}`;
+  console.log( audioEnd.textContent = `${min}:${sec}`)
 });
-
+document.addEventListener("DOMContentLoaded",show)
 
 //Пауза и включение трека
   audioPlay.addEventListener("click",function()
@@ -128,4 +130,3 @@ const show = audio.addEventListener('canplaythrough', function() {
       volumeBtn.classList.add('fa-volume-xmark');
     }
   });
-  document.addEventListener("DOMContentLoaded",show)
