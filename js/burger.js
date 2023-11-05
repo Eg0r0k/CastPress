@@ -15,3 +15,18 @@ document.addEventListener("click", function(event)
         menu.classList.remove("open")
       }
 })
+
+
+
+
+let loader = document.querySelector(".loader__background")
+
+window.addEventListener("load",()=>
+{
+    loader.classList.add("hide")
+    setTimeout(()=>
+    {
+        loader.remove()
+    },600)
+    
+})

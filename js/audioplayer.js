@@ -35,9 +35,9 @@ const show = audio.addEventListener('canplaythrough', function() {
   if (min < 10) { min = '0' + min; }
   if (sec < 10) { sec = '0' + sec; }
   audioEnd.textContent = `${min}:${sec}`;
-  console.log( audioEnd.textContent = `${min}:${sec}`)
+
 });
-document.addEventListener("DOMContentLoaded",show)
+document.addEventListener("load",show)
 
 //Пауза и включение трека
   audioPlay.addEventListener("click",function()
